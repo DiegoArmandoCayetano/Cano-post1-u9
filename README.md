@@ -73,5 +73,4 @@ http://localhost:8080/registro
 ---
 
 ## 📌 Autor
-
 Diego Armando Cayetano
