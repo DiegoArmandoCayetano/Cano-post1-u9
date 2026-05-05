@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>Iniciar Sesión</h1>
+
+<form th:action="@{/login}" method="post">
+
+    <div th:if="${param.error}" style="color:red">
+        Credenciales incorrectas
+    </div>
+
+    <div th:if="${param.logout}">
+        Sesión cerrada
+    </div>
+
+    <div th:if="${param.registrado}">
+        Registro exitoso
+    </div>
+
+    <label>Email:</label>
+    <input type="email" name="username" required>
+
+    <br>
+
+    <label>Contraseña:</label>
+    <input type="password" name="password" required>
+
+    <br>
+
+    <button type="submit">Ingresar</button>
+
+</form>
+
+<a href="/registro">Registrarse</a>
+
+</body>
+</html>
